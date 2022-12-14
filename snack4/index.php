@@ -7,13 +7,22 @@ Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà co
 // CREO ARRAY VUOTO
 $array = [];
 // CICLO FOR PER GENERARE 15 NUMERI CASUALI
-for($i=0; $i<15; $i++){
-    $numeroRandom = rand(1, 30);
+for($i=0; count($array)<15; $i++){
+    $numeroRandom = rand(1, 1000);
+    
+    //controllo se numero è gia presente in array
+    if( !in_array( $numeroRandom, $array )){    
     //INSERISCO OGNI NUMERO GENERATO SUBITO NELL'ARRAY
-    array_push($array, $numeroRandom);
+    //potrei inserire le chiavi scrivendo dentro le []
+    $array[] = $numeroRandom;
+    };
 };
 // STAMPO ARRAY
-print_r($array);
+
+for($k=0; $k< count($array); $k++){
+    echo $array[$k];
+    echo "<br>";
+};
 
 
 

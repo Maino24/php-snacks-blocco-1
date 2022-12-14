@@ -31,29 +31,26 @@ $posts = [
     ],
 ];
 
+//MI PERMETTE DI ATTRIBUIRE UN ARRAY ALLE CHIAVI
+$arrayDate = array_keys( $posts );
+
+//var_dump( $posts[ $arrayDate[0]]);
+
+for( $i=0; $i<count($posts); $i++ ){
+    echo $arrayDate[$i];
+    echo "<br>";
 
 
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <?php
-
-    for($i = 0;  $i < count($posts); $i++){
-        echo $posts[$i];
+    for($k=0; $k<count($posts[ $arrayDate[$i]]); $k++){
+        echo $posts[ $arrayDate[$i]][$k]['title'];
+        echo "<br>";
+        echo $posts[ $arrayDate[$i]][$k]['author'];
+        echo "<br>";
+        echo $posts[ $arrayDate[$i]][$k]['text'];
+        echo "<br>";
+        echo "<br>";
     };
 
+};
 
-
-    ?>
-
-</body>
-</html>
+?>
