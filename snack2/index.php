@@ -34,10 +34,10 @@ $eta = $_GET['eta'];
 
     <?php
     
-    if(strlen($nome) > 3 && strpos($email, '.') !== false && strpos($email, '@') !== false && is_numeric($eta)){
-        echo('Accesso riuscito')
+    if(strlen($nome) > 3 && strpos($email, '.') !== false && strpos($email, '@') !== false && is_numeric($eta) == true){
+        echo('Accesso riuscito');
     }else{
-        echo('Accesso negato')
+        echo('Accesso negato');
     };
     
     
